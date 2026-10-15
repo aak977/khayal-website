@@ -67,17 +67,21 @@ svg{display:block}
 /* ---------- header ---------- */
 .hdr{position:absolute;z-index:5;color:var(--nav-fg);border-radius:0 0 var(--r) var(--r);background:radial-gradient(60% 140% at 12% 0%,rgba(124,77,255,.28),transparent 60%),radial-gradient(40% 120% at 100% 100%,rgba(196,178,255,.10),transparent 70%),var(--stars),linear-gradient(180deg,#171030,#0E0A1C);box-shadow:0 0 0 1px rgba(196,178,255,.16),inset 0 1px 0 rgba(255,255,255,.07),0 24px 60px -24px rgba(124,77,255,.55)}
 .hdr::after{content:"";position:absolute;left:8%;right:8%;bottom:0;height:1px;background:linear-gradient(90deg,transparent,#A68BFF,transparent);opacity:.8;pointer-events:none}
-.util{display:flex;align-items:center;height:40px;border-bottom:1px solid var(--nav-line);font-size:12px;line-height:1.15;color:var(--nav-muted);padding-inline:26px 0}
+.util{display:flex;align-items:center;height:44px;border-bottom:1px solid var(--nav-line);font-size:13px;line-height:1;color:var(--nav-muted);padding-inline:28px 12px}
 .util .ph1,.util .ph2{display:flex;align-items:center;gap:8px;white-space:nowrap}
 .util .ph1 svg,.util .ph2 svg{width:16px;height:16px;flex:none;color:var(--ink)}
 .util .ph1 b,.util .ph2 b{color:var(--ink);font-weight:600}
 .num{direction:ltr;unicode-bidi:isolate}
-.util .rule{width:1px;height:22px;background:var(--nav-rule);margin-inline:22px}
+.util .rule{width:1px;height:16px;background:var(--nav-rule);margin-inline:20px}
+.uright{margin-inline-start:auto;display:flex;align-items:center;gap:16px}
+.unote{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.live{width:7px;height:7px;border-radius:50%;background:#3DDC97;box-shadow:0 0 0 3px rgba(61,220,151,.18)}
 .unav{display:flex;align-items:center;gap:22px;margin-inline-start:auto;height:100%}
 .unav a{font-size:14px;font-weight:500;color:var(--ink);line-height:1.1}
-.lang{width:39px;height:39px;border:0;background:var(--nav-chip);border-radius:5px 0 0 5px;cursor:pointer;font-family:var(--ar-sans);font-weight:700;font-size:16px;display:grid;place-items:center}
-:root[lang="ar"] .lang{border-radius:0 5px 5px 0;font-family:var(--display);font-size:13px}
-.main{display:flex;align-items:center;height:101px;padding-inline:26px 20px;gap:24px}
+.lang{height:30px;padding-inline:14px;border:1px solid var(--nav-rule);background:rgba(196,178,255,.06);border-radius:999px;cursor:pointer;font-family:var(--ar-sans);font-weight:700;font-size:13px;display:inline-flex;align-items:center;color:var(--ink);transition:background .2s,border-color .2s}
+.lang:hover{background:rgba(124,77,255,.22);border-color:var(--ember)}
+:root[lang="ar"] .lang{font-family:"Inter",sans-serif;font-weight:600}
+.main{display:flex;align-items:center;height:97px;padding-inline:28px 20px;gap:32px}
 .logo{display:flex;align-items:center;gap:16px}
 .logo svg.lw{height:58px;width:auto;flex:none;overflow:visible;filter:drop-shadow(0 6px 18px rgba(124,77,255,.45))}
 .lsep{width:1px;height:34px;background:linear-gradient(transparent,rgba(196,178,255,.5),transparent)}
@@ -86,7 +90,9 @@ svg{display:block}
 .logo .wm span{font-size:9.5px;font-weight:600;letter-spacing:.18em;color:var(--dune);text-transform:uppercase}
 :root[lang="ar"] .logo .wm span{letter-spacing:0;font-size:12px}
 .logo .wm span i{font-style:normal;font-family:var(--ar-sans);font-weight:700;letter-spacing:0;font-size:11px;color:var(--dune)}
-.nav{display:flex;align-items:center;gap:22px;margin-inline-start:auto;font-weight:600;font-size:16px}
+.nav{display:flex;align-items:center;gap:28px;margin-inline-start:auto;font-weight:600;font-size:15px}
+.nav a{opacity:.86;transition:opacity .2s}.nav a:hover{opacity:1}
+html.desk .main>.menu-btn{display:none}
 .nav a{display:inline-flex;align-items:center;gap:10px}
 .nav .sep{width:1px;height:26px;background:var(--nav-rule)}
 .circ{width:24px;height:24px;border-radius:50%;background:var(--ember);color:#fff;display:grid;place-items:center;flex:none}
@@ -94,10 +100,10 @@ svg{display:block}
 :root[lang="ar"] .circ svg,:root[lang="ar"] .tk svg{transform:scaleX(-1)}
 .menu-btn{display:inline-flex;align-items:center;gap:10px;border:0;background:none;cursor:pointer;font-weight:600;font-size:16px;padding:0}
 .burger{width:22px;display:grid;gap:5px}.burger i{height:2px;background:currentColor;border-radius:2px}
-.cta{display:flex;align-items:center;gap:0}
-.pill{display:inline-flex;align-items:center;justify-content:center;height:63px;padding-inline:26px;min-width:116px;border-radius:22px;background:var(--nav-cta);color:var(--nav-cta-fg);font-weight:700;font-size:16px;white-space:nowrap}
-.tk{width:64px;height:64px;border-radius:50%;background:var(--nav-cta);color:#fff;display:grid;place-items:center;flex:none}
-.tk svg{width:24px;height:24px}
+.cta{display:flex;align-items:center;gap:6px}
+.pill{display:inline-flex;align-items:center;justify-content:center;height:56px;padding-inline:26px;min-width:116px;border-radius:999px;background:var(--nav-cta);color:var(--nav-cta-fg);font-weight:700;font-size:16px;white-space:nowrap}
+.tk{width:56px;height:56px;border-radius:50%;background:var(--nav-cta);color:#fff;display:grid;place-items:center;flex:none}
+.tk svg{width:20px;height:20px}
 .tk.spark{background:var(--dune);color:#07060D}
 .panel{display:none}
 
@@ -376,6 +382,30 @@ input[type=text]{width:100%;padding:13px 16px;border-radius:14px;border:1px soli
   .btn .pill{height:50px;font-size:15px}.btn .tk{width:50px;height:50px}
 }
 
+/* spacing system: 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 */
+.sec{padding-block:112px 0}
+.sh{margin-bottom:40px;gap:24px 48px}
+.sh h2,.big{margin-top:16px}
+.sh p{line-height:1.6}
+.pills{gap:10px}
+.spanel{margin-top:24px;padding:32px;gap:48px}
+.sbody{gap:20px}
+.ideas{gap:12px}.ideas li{padding:16px 18px}
+.alsoh{margin:48px 0 16px}
+.also{gap:16px;margin-top:0}.also div{padding:20px 22px;display:grid;gap:6px}
+.fmts{gap:16px}.fmt{gap:12px}.fmt h3{margin-top:4px}
+.wgrid{gap:16px;margin-top:24px}.note{margin-top:20px}
+.trust{padding:64px}.trust .sh{margin-bottom:32px}.tgrid div{padding:28px 32px 28px 0}:root[lang="ar"] .tgrid div{padding:28px 0 28px 32px}
+.steps{gap:32px}.steps li{padding-top:20px}
+.plans{gap:16px}.plan{padding:32px;gap:16px}.plan ul{gap:10px}
+.mini{gap:16px;margin-top:16px}.mini div{padding:20px 24px}
+.small{margin-top:20px}
+.brief{padding:64px;gap:56px;align-items:center}.form{padding:28px;gap:20px}.contact{gap:32px;margin-top:32px}
+.faq details{padding:22px 0}
+.foot{margin-top:128px}
+@media (max-width:1000px){.spanel{gap:32px}.brief{padding:40px;gap:32px}.trust{padding:48px}}
+@media (max-width:560px){.sec{padding-block:80px 0}.sh{margin-bottom:28px}.spanel{padding:16px;gap:24px}.trust{padding:32px 20px}.tgrid div,:root[lang="ar"] .tgrid div{padding:20px 0}.brief{padding:28px 20px;gap:28px}.form{padding:20px}.plan{padding:24px}.steps{gap:28px}.foot{margin-top:96px}.alsoh{margin-top:36px}}
+html.mob .hero{padding-block:28px 20px;gap:16px}
 /* align sections with the hero text column */
 html.desk .page,html.tab-l .page{padding-inline:calc(86px*var(--s,1)) calc(62px*var(--s,1))}
 html.desk .sec,html.tab-l .sec,html.desk .foot,html.tab-l .foot{max-width:none}
@@ -408,16 +438,10 @@ html.intro .hero p,html.intro .acts>*,html.intro .grid{opacity:0}
 
   <header class="hdr" id="hdr">
     <div class="util">
-      <a class="ph1 wa" href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span><span data-t="u1"></span> <b class="num">+971 54</b><br><b class="num">737 9951</b></span></a>
+      <a class="ph1 wa" href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span><span data-t="u1"></span> <b class="num">+971 54 737 9951</b></span></a>
       <span class="rule"></span>
-      <span class="ph2"><svg><use href="#i-pin"/></svg><span><span data-t="u2"></span><br><b data-t="u2b"></b></span></span>
-      <nav class="unav" aria-label="Useful links" data-tl="useful">
-        <a href="#sectors" data-t="l1"></a>
-        <a href="#formats" data-t="l2" data-html></a>
-        <a href="#work" data-t="l3"></a>
-        <a href="#packages" data-t="l4"></a>
-        <button class="lang" type="button" id="lang" aria-label="Switch language">ع</button>
-      </nav>
+      <span class="ph2"><svg><use href="#i-pin"/></svg><span><span data-t="u2"></span> <b data-t="u2b"></b></span></span>
+      <div class="uright"><span class="unote"><i class="live" aria-hidden="true"></i><span data-t="u3"></span></span><button class="lang" type="button" id="lang" aria-label="Switch language">العربية</button></div>
     </div>
     <div class="main">
       <a class="logo" href="#top" aria-label="Khayal Studio home"><svg class="lw" viewBox="-90 -840 2020 1090"><use href="#i-word" x="-90" y="-840" width="2020" height="1090"/></svg><span class="lsep" aria-hidden="true"></span><span class="wm"><b>KHAYAL</b><span data-t="tag"></span></span></a>
@@ -426,6 +450,7 @@ html.intro .hero p,html.intro .acts>*,html.intro .grid{opacity:0}
         <span class="sep"></span>
         <a href="#formats" data-t="n2"></a>
         <a href="#work" data-t="n3"></a>
+        <a href="#packages" data-t="l4"></a>
       </nav>
       <button class="menu-btn" type="button" id="menuBtn" aria-expanded="false" aria-controls="panel"><span class="burger" aria-hidden="true"><i></i><i></i><i></i></span><span data-t="menu"></span></button>
       <div class="cta"><a class="pill wa" href="#" target="_blank" rel="noopener" data-t="cta"></a><a class="tk spark wa" href="#" target="_blank" rel="noopener" aria-label="Free concept on WhatsApp"><svg><use href="#i-spark"/></svg></a></div>
@@ -570,13 +595,13 @@ html.intro .hero p,html.intro .acts>*,html.intro .grid{opacity:0}
 
 <script>
 const T={
-en:{u1:"WhatsApp :",u2:"Abu Dhabi studio :",u2b:"All 7 Emirates",l1:"Sectors",l2:"Signature<br>formats",l3:"Work",l4:"Packages",
+en:{u1:"WhatsApp",u2:"Abu Dhabi ·",u3:"Replies the same day",u2b:"All 7 Emirates",l1:"Sectors",l2:"Signature<br>formats",l3:"Work",l4:"Packages",
 tag:"AI film & image studio",n1:"Sectors",n2:"Formats",n3:"Work",menu:"Menu",cta:"Free concept",
 h1:["If you can","dream it,","we can","<em>film it.</em>"],
 body:"Khayal turns one photo into cinema-grade AI films for real estate, restaurants, hotels, gaming, retail and cars. Your <strong>first concept is free, in 48 hours</strong>.",
 more:"See sectors",other:"العربية",
 wa:"Hi Khayal! I'd like my free concept video."},
-ar:{u1:"واتساب :",u2:"استوديو أبوظبي :",u2b:"الإمارات السبع",l1:"القطاعات",l2:"صيغ<br>خيال",l3:"أعمالنا",l4:"الباقات",
+ar:{u1:"واتساب",u2:"أبوظبي ·",u3:"نرد في نفس اليوم",u2b:"الإمارات السبع",l1:"القطاعات",l2:"صيغ<br>خيال",l3:"أعمالنا",l4:"الباقات",
 tag:"استوديو أفلام وصور بالذكاء الاصطناعي",n1:"القطاعات",n2:"الصيغ",n3:"أعمالنا",menu:"القائمة",cta:"فكرة مجانية",
 h1:["إذا تقدر","تتخيّلها،","نقدر","<em>نصوّرها.</em>"],
 body:"خيال يحوّل صورة وحدة إلى أفلام بجودة سينما للعقارات والمطاعم والفنادق والألعاب والأزياء والسيارات. <strong>أول فكرة مجاناً، خلال 48 ساعة</strong>.",
@@ -852,7 +877,7 @@ function render(){
   document.querySelectorAll('.solid').forEach(c=>{const l=LB[c.dataset.lb];c.querySelector('b').textContent=l[0];c.querySelector('b').classList.toggle('ar',l[0]==='خيال');c.querySelector('b').classList.toggle('long',l[0].length>4&&l[0]!=='خيال');c.querySelector('small').textContent=L==='ar'?l[2]:l[1];});
   document.querySelectorAll('.wa').forEach(a=>a.href=`https://wa.me/${PHONE}?text=${encodeURIComponent(t.wa)}`);
   renderSecs();
-  $('lang').textContent=L==='ar'?'EN':'ع';
+  $('lang').textContent=t.other;
   document.title=L==='ar'?'خيال — استوديو أفلام بالذكاء الاصطناعي':'Khayal Studio';
 }
 function toggle(){L=L==='en'?'ar':'en';try{localStorage.setItem('khayal-lang',L);}catch(e){}render();fit();}
