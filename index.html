@@ -611,7 +611,7 @@ const grid=$('grid');
   const col=document.createElement('div');col.className='col '+k;
   COLS[k].forEach(spec=>{
     const [a,b]=spec.split(':'),c=document.createElement('div');
-    if(a==='p'){c.className='cell ph';c.style.setProperty('--pic',`url(v/${b}.jpg)`);}
+    if(a==='p'){c.className='cell ph';c.style.setProperty('--pic',`url(${b}.jpg)`);}
     else{c.className='cell solid '+a;c.dataset.lb=b;c.innerHTML='<small></small><b></b>';}
     col.appendChild(c);
   });
