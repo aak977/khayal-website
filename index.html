@@ -1,4 +1,7 @@
 <meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..900&display=swap">
 <title>Khayal Studio</title>
 <script>try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('intro');setTimeout(()=>document.documentElement.classList.remove('intro'),4000);}}catch(e){}</script>
 <style>
@@ -15,8 +18,8 @@
   --card-dark:#120D22; --card-cream:#F4F0FF;
   --ember:#7C4DFF; --dune:#C4B2FF; --lilac:#2A1660; --hl:#A68BFF; --wa:#25D366;
   --nav-bg:#120E1E; --nav-fg:var(--ink); --nav-muted:#A79FC2; --nav-line:rgba(196,178,255,.12); --nav-rule:rgba(196,178,255,.22); --nav-chip:#221B36; --nav-cta:var(--ember); --nav-cta-fg:#fff;
-  --display:"Thmanyah Sans",Tahoma,system-ui,sans-serif;
-  --sans:"Thmanyah Sans",Tahoma,system-ui,sans-serif;
+  --display:"Inter","Thmanyah Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --sans:"Inter","Thmanyah Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --ar-display:"Thmanyah Serif Display","Thmanyah Sans",Tahoma,serif;
   --ar-sans:"Thmanyah Sans",Tahoma,system-ui,sans-serif;
   --col:205.33px; --gap:13px; --pitch:282.5px; --r:22px;
@@ -31,7 +34,7 @@
 
 *{box-sizing:border-box}
 html,body{margin:0}
-body{background:var(--paper) var(--stars) repeat;background-attachment:fixed;color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+body{font-feature-settings:"cv11","ss01";background:var(--paper) var(--stars) repeat;background-attachment:fixed;color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit}
 :focus-visible{outline:2px solid #3b82f6;outline-offset:3px}
@@ -55,8 +58,8 @@ svg{display:block}
 .dark::after{mix-blend-mode:screen;opacity:.06}
 .solid{display:flex;flex-direction:column;justify-content:space-between;padding:calc(var(--col)*.08)}
 .solid small{font-family:var(--sans);font-weight:600;font-size:calc(var(--col)*.062);letter-spacing:.02em;line-height:1.25;max-width:12ch}
-.solid b{font-family:var(--display);font-weight:900;font-size:calc(var(--col)*.34);line-height:.82;letter-spacing:-.04em}
-.solid b.long{font-size:calc(var(--col)*.25)}
+.solid b{font-family:"Inter",system-ui,sans-serif;font-weight:900;font-size:calc(var(--col)*.26);line-height:.86;letter-spacing:-.02em}
+.solid b.long{font-size:calc(var(--col)*.2)}
 .solid b.ar{font-family:var(--ar-display);font-size:calc(var(--col)*.36);line-height:1.1;letter-spacing:0;color:var(--dune)}
 .solid .dot{width:calc(var(--col)*.05);height:calc(var(--col)*.05);border-radius:50%;background:currentColor;align-self:flex-end}
 :root[lang="ar"] .solid small{font-weight:700;font-size:calc(var(--col)*.07)}
@@ -100,9 +103,9 @@ svg{display:block}
 
 /* ---------- hero ---------- */
 .hero{position:absolute;z-index:3}
-.hero h1{margin:0;font-family:var(--display);font-weight:900;font-size:80px;line-height:75.3px;letter-spacing:-.035em;text-transform:uppercase;-webkit-text-stroke:0}
+.hero h1{margin:0;font-family:var(--display);font-weight:900;font-size:80px;line-height:75.3px;letter-spacing:-.025em;text-transform:uppercase;-webkit-text-stroke:0}
 .hero h1 .ln{display:block;overflow:hidden;padding-bottom:2px}
-.hero h1 .ln span{display:block;font-size:.92em;letter-spacing:-.03em}
+.hero h1 .ln span{display:block;font-size:.92em;letter-spacing:-.015em}
 .hero h1 em{font-style:normal;color:var(--hl);-webkit-text-stroke:1.1px var(--hl)}
 :root[lang="ar"] .hero h1{letter-spacing:0;line-height:1.05;-webkit-text-stroke:0;font-size:84px}
 :root[lang="ar"] .hero h1 .ln span{letter-spacing:0}
@@ -206,7 +209,7 @@ html.tab-l .panel{background:var(--nav-bg);border-radius:0 0 22px 22px}
 .ey{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .ey::before{content:"";width:12px;height:12px;background:var(--ember);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
 :root[lang="ar"] .ey{letter-spacing:0;font-size:15px;font-weight:700}
-.sh h2,.big{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(46px,7vw,96px);line-height:.88;letter-spacing:-.055em;margin:12px 0 0;text-wrap:balance}
+.sh h2,.big{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(46px,7vw,96px);line-height:.88;letter-spacing:-.03em;margin:12px 0 0;text-wrap:balance}
 :root[lang="ar"] .sh h2,:root[lang="ar"] .big{letter-spacing:0;line-height:1.12;font-size:clamp(40px,5.6vw,72px)}
 .sh p{margin:0;max-width:40ch;color:#CFC7E6;font-size:17px;line-height:1.55}
 .vt{position:relative;border-radius:var(--r);overflow:hidden;background:#1A1528;max-width:100%;cursor:pointer}
@@ -217,7 +220,7 @@ html.tab-l .panel{background:var(--nav-bg);border-radius:0 0 22px 22px}
 .vt .tg{position:absolute;inset-inline-start:10px;top:10px;background:var(--ember);color:#fff;font-size:11px;font-weight:600;padding:4px 9px;border-radius:999px}
 .pills{display:flex;gap:8px;flex-wrap:wrap}
 .pills button{font:inherit;font-size:15px;font-weight:600;padding:10px 16px;border-radius:999px;border:1px solid var(--nav-rule);background:transparent;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
-.pills button i{font-style:normal;font-family:var(--display);font-weight:800;font-size:12px;color:var(--ember)}
+.pills button i{font-style:normal;font-family:"Inter",system-ui,sans-serif;font-weight:800;font-size:12px;color:var(--ember)}
 .pills button[aria-selected="true"],.pills button[aria-pressed="true"]{background:var(--ember);color:#fff;border-color:var(--ember)}
 .pills button[aria-selected="true"] i{color:#fff}
 .btn{display:inline-flex;align-items:center;gap:0;font-weight:700}
@@ -233,7 +236,7 @@ html.tab-l .panel{background:var(--nav-bg);border-radius:0 0 22px 22px}
 .sbody{display:flex;flex-direction:column;gap:18px;min-width:0;padding-block:6px}
 .sbody .code{font-family:var(--display);font-weight:900;font-size:14px;letter-spacing:.08em;color:var(--ember)}
 :root[lang="ar"] .sbody .code{font-family:var(--ar-sans);letter-spacing:0;font-size:16px}
-.sbody h3{margin:0;font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(36px,4.4vw,58px);line-height:.9;letter-spacing:-.05em}
+.sbody h3{margin:0;font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(36px,4.4vw,58px);line-height:.9;letter-spacing:-.025em}
 :root[lang="ar"] .sbody h3{letter-spacing:0;line-height:1.2;font-size:clamp(30px,3.6vw,44px)}
 .sbody .pain{margin:0;color:#CFC7E6;font-size:17px;max-width:52ch}
 .ideas{list-style:none;padding:0;margin:0;display:grid;gap:10px}
@@ -254,7 +257,7 @@ html.tab-l .panel{background:var(--nav-bg);border-radius:0 0 22px 22px}
 .fmts{display:grid;grid-template-columns:repeat(6,1fr);gap:13px}
 .fmt{display:flex;flex-direction:column;gap:10px;min-width:0}
 .fmt .vt{aspect-ratio:3/4}
-.fmt h3{margin:0;font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:22px;line-height:.95;letter-spacing:-.04em}
+.fmt h3{margin:0;font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:22px;line-height:.95;letter-spacing:-.015em}
 :root[lang="ar"] .fmt h3{letter-spacing:0;font-size:20px;line-height:1.3}
 .fmt p{margin:0;color:#A79FC2;font-size:14px;line-height:1.45}
 
@@ -278,7 +281,7 @@ html.tab-l .panel{background:var(--nav-bg);border-radius:0 0 22px 22px}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;list-style:none;padding:0;margin:0;counter-reset:s}
 .steps li{counter-increment:s;min-width:0;border-top:2px solid var(--ink);padding-top:16px}
 .steps li::before{content:counter(s,decimal-leading-zero);display:block;font-family:var(--display);font-weight:900;font-size:84px;line-height:.9;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.4px var(--ink);margin-bottom:12px}
-.steps h3{margin:0 0 6px;font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:24px;letter-spacing:-.04em}
+.steps h3{margin:0 0 6px;font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:24px;letter-spacing:-.015em}
 :root[lang="ar"] .steps h3{letter-spacing:0;font-size:22px}
 .steps p{margin:0;color:#A79FC2;font-size:15px}
 .steps .t{display:inline-block;margin-top:10px;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--dune);color:#07060D}
@@ -289,10 +292,10 @@ html.tab-l .panel{background:var(--nav-bg);border-radius:0 0 22px 22px}
 .plan.hot{background:var(--dune);box-shadow:none;color:#07060D}
 .plan.hot .who{color:#2A1660}
 .plan.dk{background:var(--lilac);color:#f5f1ea;box-shadow:none}
-.plan h3{margin:0;font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:30px;letter-spacing:-.04em}
+.plan h3{margin:0;font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:30px;letter-spacing:-.015em}
 :root[lang="ar"] .plan h3{letter-spacing:0;font-size:26px}
 .plan .who{margin:-6px 0 0;font-size:14px;opacity:.75}
-.price{font-family:var(--display);font-weight:900;font-size:64px;line-height:.9;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.price{font-family:var(--display);font-weight:900;font-size:64px;line-height:.9;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .price small{font-family:var(--sans);font-size:14px;font-weight:600;letter-spacing:0;opacity:.7}
 .plan ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:15px;flex:1}
 .plan li{padding-inline-start:18px;position:relative}
@@ -373,6 +376,12 @@ input[type=text]{width:100%;padding:13px 16px;border-radius:14px;border:1px soli
   .btn .pill{height:50px;font-size:15px}.btn .tk{width:50px;height:50px}
 }
 
+/* align sections with the hero text column */
+html.desk .page,html.tab-l .page{padding-inline:calc(86px*var(--s,1)) calc(62px*var(--s,1))}
+html.desk .sec,html.tab-l .sec,html.desk .foot,html.tab-l .foot{max-width:none}
+html[dir="rtl"].desk .page,html[dir="rtl"].tab-l .page{padding-inline:calc(86px*var(--s,1)) calc(62px*var(--s,1))}
+html.tab-p .page{padding-inline:clamp(20px,4vw,40px)}
+@media (max-width:560px){.also{grid-template-columns:1fr}.also div{padding:16px}}
 /* intro pre-state */
 html.intro .hdr{transform:translateY(calc(-100% - 48px))}
 html.intro .hero h1 .ln span{transform:translateY(110%)}
@@ -602,7 +611,7 @@ const grid=$('grid');
   const col=document.createElement('div');col.className='col '+k;
   COLS[k].forEach(spec=>{
     const [a,b]=spec.split(':'),c=document.createElement('div');
-    if(a==='p'){c.className='cell ph';c.style.setProperty('--pic',`url(${b}.jpg)`);}
+    if(a==='p'){c.className='cell ph';c.style.setProperty('--pic',`url(v/${b}.jpg)`);}
     else{c.className='cell solid '+a;c.dataset.lb=b;c.innerHTML='<small></small><b></b>';}
     col.appendChild(c);
   });
